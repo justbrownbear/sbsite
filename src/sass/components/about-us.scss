@@ -1,0 +1,17 @@
+.bw-about_us
+{
+	&__wrap
+	{
+		background-color: #202a36;
+		padding: 100px 0;
+	}
+
+
+	.bw-section
+	{
+		&__title, &__subtitle, &__description
+		{
+			color: #fff;
+		}
+	}
+}

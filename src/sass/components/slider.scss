@@ -1,0 +1,79 @@
+.bw-slider
+{
+	&__wrap
+	{
+		height: 100vh;
+		background-position: center center;
+		background-size: cover;
+		position: relative;
+
+
+		&.image_01
+		{
+			background-image: url(/images/slider__image_01.jpg);
+
+			&:before
+			{
+				position: absolute;
+				content: '';
+				width: 100vw;
+				height: 100vh;
+				background: rgb(32,42,54);
+				background: -moz-linear-gradient(0deg, rgba(32,42,54,1) 0%, rgba(32,42,54,0) 100%);
+				background: -webkit-linear-gradient(0deg, rgba(32,42,54,1) 0%, rgba(32,42,54,0) 100%);
+				background: linear-gradient(0deg, rgba(32,42,54,1) 0%, rgba(32,42,54,0) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#202a36",endColorstr="#202a36",GradientType=1); 
+				display: block;
+			}
+		}
+	}
+
+
+	&__content
+	{
+		padding-top: 30vh;
+	}
+
+
+	.bw-section__title
+	{
+		color: #fff;
+	}
+
+
+	.bw-btn-border
+	{
+		color: #fff;
+		margin-right: 10px;
+	}
+}
+
+
+
+@media (max-width: 992px)
+{
+	.bw-slider .bw-section__title
+	{
+		font-size: 60px;
+	}
+}
+
+
+@media (max-width: 768px)
+{
+	.bw-slider .bw-section__title
+	{
+		font-size: 40px;
+		text-align: center;
+	}
+
+	.bw-section__title-accent:after
+	{
+		left: calc(100%/2 - 20px)
+	}
+
+	.bw-slider__group-buttons
+	{
+		text-align: center;
+	}
+}

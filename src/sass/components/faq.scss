@@ -1,0 +1,91 @@
+.bw-section__faq
+{
+	padding: 0 0 100px;
+}
+
+
+.bw-section-faq
+{
+	&__list
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+
+	&__item
+	{
+		border-top: 1px solid #F0F0F0;
+		padding: 20px 0;
+
+
+		&:last-child
+		{
+			border-bottom: 1px solid #F0F0F0;
+		}
+
+
+		&-title
+		{
+			font-size: 20px;
+			font-weight: 700;
+			padding-left: 35px;
+			position: relative;
+
+
+			&:hover
+			{
+				color: #1383CF;
+				cursor: pointer;
+			}
+
+
+			.bw-icon-plus,
+			.bw-icon-minus
+			{
+				color: #1383CF;
+				position: absolute;
+				left: 3px;
+				top: 2px;
+				font-size: 16px;				
+			}
+
+
+			.bw-icon-minus
+			{
+				display: none;
+			}
+		}
+
+
+		&-description
+		{
+			font-size: 15px;
+			font-weight: 300;
+			padding-left: 35px;
+			margin-top: 20px;
+			display: none;
+		}
+
+
+		&.active
+		{
+			.bw-icon-plus
+			{
+				display: none;
+			}
+
+
+			.bw-icon-minus
+			{
+				display: block;
+			}
+
+
+			.bw-section-faq__item-description
+			{
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+.bw-header__breadcrumbs
+{
+	margin: 30px 0 50px;
+}
+
+
+.bw-header-breadcrumbs
+{
+	&__nav-list,
+	&__nav-item
+	{
+		color: #202A36;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+		-moz-opacity: 0.5;
+		-khtml-opacity: 0.5;
+		opacity: 0.5;
+	}
+
+
+	&__nav-item
+	{
+		margin: 0 10px;
+
+
+		&:first-child
+		{
+			margin-left: 0;
+		}
+
+
+		&:hover
+		{
+			color: #202A36;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+			-moz-opacity: 1;
+			-khtml-opacity: 1;
+			opacity: 1;
+		}
+	}
+
+
+	&__title
+	{
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 40px;
+		font-weight: 700;
+	}
+}
