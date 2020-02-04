@@ -1,10 +1,12 @@
 import * as React from "react";
-import { Header } from "../../components/Header/Header";
-import { Breadcrumbs } from "../../components/Breadcrumbs/Breadcrumbs";
+import loadable from "@loadable/component";
 
-import { Footer } from "../../components/Footer/Footer";
+const Header = loadable( () => import( /* webpackChunkName: "Header" */ "../../components/Header/Header" ) );
+const Breadcrumbs = loadable( () => import( /* webpackChunkName: "Breadcrumbs" */ "../../components/Breadcrumbs/Breadcrumbs" ) );
+const Footer = loadable( () => import( /* webpackChunkName: "Footer" */ "../../components/Footer/Footer" ) );
 
 import "../../sass/components/projects.scss";
+import { HashLink as Link } from "react-router-hash-link";
 
 
 const TITLE = "Projects";
@@ -14,37 +16,37 @@ const projectImages =
 [
 	{
 		id: 1,
-		file: "images/projects/project__image_01.jpg"
+		file: "images/projects/project__image_01.webp"
 	},
 	{
 		id: 2,
-		file: "images/projects/project__image_02.jpg"
+		file: "images/projects/project__image_02.webp"
 	},
 	{
 		id: 3,
-		file: "images/projects/project__image_03.jpg"
+		file: "images/projects/project__image_03.webp"
 	},
 	{
 		id: 4,
-		file: "images/projects/project__image_04.jpg"
+		file: "images/projects/project__image_04.webp"
 	},
 	{
 		id: 5,
-		file: "images/projects/project__image_04.jpg"
+		file: "images/projects/project__image_04.webp"
 	},
 	{
 		id: 6,
-		file: "images/projects/project__image_01.jpg"
+		file: "images/projects/project__image_01.webp"
 	},
 	{
 		id: 7,
-		file: "images/projects/project__image_02.jpg"
+		file: "images/projects/project__image_02.webp"
 	}
 ];
 
 
 
-export function Projects()
+export default function Projects()
 {
 	return (
 		<>
@@ -84,7 +86,7 @@ function ProjectImage( props )
 
 	return (
 		<div className="col-lg-3 col-md-3 col-sm-6">
-			<a href="/" className="bw-recent-works__slider-item" style={ style }></a>
+			<Link to="/" className="bw-recent-works__slider-item" style={ style }></Link>
 		</div>
 	);
 }

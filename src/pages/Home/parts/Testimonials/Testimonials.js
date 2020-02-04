@@ -1,9 +1,7 @@
 import * as React from "react";
-import { useState } from "react";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 import { Feedback } from "./Feedback";
 import { testimonials } from "../../../../model/testimonials";
@@ -12,10 +10,11 @@ import "../../../../sass/components/testimonials.scss";
 
 
 
-export function Testimonials()
+export default function Testimonials()
 {
 	const slickSettings = 
 	{
+		arrows: false,
 		dots: false,
 		infinite: true,
 		slidesToShow: 2,

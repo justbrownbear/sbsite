@@ -1,10 +1,13 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
+import loadable from "@loadable/component";
 import { getQueryVariable } from "../../utils/getQuery";
-import { Header } from "../../components/Header/Header";
-import { Breadcrumbs } from "../../components/Breadcrumbs/Breadcrumbs";
-import { OrderForm } from "./components/OrderForm";
-import { Footer } from "../../components/Footer/Footer";
+
+
+const Header = loadable( () => import( /* webpackChunkName: "Header" */ "../../components/Header/Header" ) );
+const Breadcrumbs = loadable( () => import( /* webpackChunkName: "Breadcrumbs" */ "../../components/Breadcrumbs/Breadcrumbs" ) );
+const OrderForm = loadable( () => import( /* webpackChunkName: "OrderForm" */ "./components/OrderForm" ) );
+const Footer = loadable( () => import( /* webpackChunkName: "Footer" */ "../../components/Footer/Footer" ) );
 
 import "../../sass/components/order.scss";
 
@@ -14,7 +17,7 @@ const TITLE = "Order form";
 
 
 
-export function Order()
+export default function Order()
 {
 	const [ formData, setFormData ] = useState( {} );
 

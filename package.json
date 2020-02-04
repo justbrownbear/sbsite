@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@loadable/component": "^5.12.0",
     "react": "^16.12.0",
     "react-color": "^2.17.3",
     "react-color-picker": "^4.0.2",
@@ -11,16 +12,14 @@
     "react-rotating-text": "^1.4.1",
     "react-router-dom": "^5.1.1",
     "react-router-hash-link": "^1.2.2",
-    "react-scripts": "3.1.1",
+    "react-scripts": "^3.3.0",
     "react-slick": "^0.25.2",
     "react-svg": "^10.0.20",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "webpack-dev-server --open --hot",
+    "build": "webpack"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,6 +37,17 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "babel-minify": "^0.5.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^3.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^7.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "webpack-clean-obsolete-chunks": "^0.4.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2"
   }
 }

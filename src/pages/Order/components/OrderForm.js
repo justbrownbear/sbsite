@@ -5,7 +5,7 @@ import { SummaryFormPart } from "./SummaryFormPart";
 
 
 
-export function OrderForm( props )
+export default function OrderForm( props )
 {
 	const { formData, setFormData, onSubmit } = props;
 	

@@ -3,7 +3,7 @@ import "../../../../sass/components/about-us.scss";
 
 
 
-export function AboutUs()
+export default function AboutUs()
 {
 	return (
 		<div id="aboutUs" className="bw-about_us">

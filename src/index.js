@@ -3,24 +3,26 @@ import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Home } from "./pages/Home/Home";
-import { Faq } from "./pages/FAQ/Faq";
-import { Projects } from "./pages/Projects/Projects";
-import { Order } from "./pages/Order/Order";
+
+import loadable from "@loadable/component";
+
+const Home = loadable( () => import( /* webpackChunkName: "Home" */ "./pages/Home/Home" ) );
+const Faq = loadable( () => import( /* webpackChunkName: "Faq" */ "./pages/FAQ/Faq" ) );
+const Projects = loadable( () => import( /* webpackChunkName: "Projects" */ "./pages/Projects/Projects" ) );
+const Order = loadable( () => import( /* webpackChunkName: "Order" */ "./pages/Order/Order" ) );
 
 import "./sass/bootstrap-4.0.0/bootstrap.scss";
 import "./sass/style.scss";
+import "./sass/fontello/css/fontello.css";
 
 
 
 const routing = (
 	<Router>
-		<div className="">
-			<Route exact path="/" component={ Home } />
-			<Route exact path="/faq" component={ Faq } />
-			<Route exact path="/projects" component={ Projects } />
-			<Route exact path="/order" component={ Order } />
-		</div>
+		<Route exact path="/" component={ ( props ) => <Home { ...props } /> } />
+		<Route exact path="/faq" component={ ( props ) => <Faq { ...props } /> } />
+		<Route exact path="/projects" component={ ( props ) => <Projects { ...props } /> } />
+		<Route exact path="/order" component={ ( props ) => <Order { ...props } /> } />
 	</Router>
 );
 

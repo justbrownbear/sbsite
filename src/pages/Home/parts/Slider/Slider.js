@@ -1,9 +1,10 @@
 import * as React from "react";
 import "../../../../sass/components/slider.scss";
+import { HashLink as Link } from "react-router-hash-link";
 
 
 
-export function Slider()
+export default function Slider()
 {
 	return (
 		<div className="bw-slider">
@@ -15,8 +16,8 @@ export function Slider()
 								Helping your business impress clients with a stunning website
 							</div>
 						</div>
-						<a href="/#pricing" className="bw-btn-border">Pricing</a>
-						<a href="/order" className="bw-btn">Get Started</a>
+						<Link to="/#pricing" className="bw-btn-border">Pricing</Link>
+						<Link to="/order" className="bw-btn">Get Started</Link>
 					</div>
 				</div>
 			</div>

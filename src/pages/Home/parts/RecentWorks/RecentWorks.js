@@ -2,10 +2,11 @@ import * as React from "react";
 import { recentWorks } from "../../../../model/recentWorks";
 import { PortfolioElement } from "./PortfolioElement";
 import "../../../../sass/components/recent_works.scss";
+import { HashLink as Link } from "react-router-hash-link";
 
 
 
-export function RecentWorks()
+export default function RecentWorks()
 {
 	return (
 		<div className="bw-recent-works">
@@ -20,10 +21,10 @@ export function RecentWorks()
 						</div>
 						<div className="col-lg-6">
 							<div className="bw-recent-works__slider-controls">
-								<a href="/projects" className="bw-recent-works__slider-link">
+								<Link to="/projects" className="bw-recent-works__slider-link">
 									View All Project
 									<i className="bw-icon icon-right-arrow"></i>
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>

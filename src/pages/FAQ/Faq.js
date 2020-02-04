@@ -1,18 +1,21 @@
 import * as React from "react";
-import { Header } from "../../components/Header/Header";
-import { Breadcrumbs } from "../../components/Breadcrumbs/Breadcrumbs";
-import { FaqContent } from "./parts/FaqContent/FaqContent";
-import { Footer } from "../../components/Footer/Footer";
-import { faqQuestions } from "../../model/faqQuestions";
+import loadable from "@loadable/component";
+
+const Header = loadable( () => import( /* webpackChunkName: "Header" */ "../../components/Header/Header" ) );
+const Breadcrumbs = loadable( () => import( /* webpackChunkName: "Breadcrumbs" */ "../../components/Breadcrumbs/Breadcrumbs" ) );
+const FaqContent = loadable( () => import( /* webpackChunkName: "FaqContent" */ "./parts/FaqContent/FaqContent" ) );
+const Footer = loadable( () => import( /* webpackChunkName: "Footer" */ "../../components/Footer/Footer" ) );
+
 
 import "../../sass/components/faq.scss";
+import { faqQuestions } from "../../model/faqQuestions";
 
 
 const TITLE = "FAQ";
 
 
 
-export function Faq()
+export default function Faq()
 {
 	return (
 		<>

@@ -3,7 +3,7 @@ import "../../../../sass/components/who-we-are.scss";
 
 
 
-export function WhoWeAre()
+export default function WhoWeAre()
 {
 	return (
         <div className="bw-who_we_are">

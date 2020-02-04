@@ -1,76 +1,77 @@
 import * as React from "react";
 import "../../sass/components/footer.scss";
+import { HashLink as Link } from "react-router-hash-link";
 
 
 
-export function Footer()
+export default function Footer()
 {
 	return (
-		<div id="footer" class="bw-footer">
-			<div class="bw-footer__wrap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4 col-md-3">
-							<div class="bw-footer__logo">
-								<a class="bw-footer-logo__img" href="/"></a>
+		<div id="footer" className="bw-footer">
+			<div className="bw-footer__wrap">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-4 col-md-3">
+							<div className="bw-footer__logo">
+								<Link className="bw-footer-logo__img" to="/"></Link>
 							</div>
-							<span class="bw-footer__logo-description">
+							<span className="bw-footer__logo-description">
 								We're a team of talented developers & designers
 							</span>
 						</div>
-						<div class="col-lg-2 col-md-4">
-							<div class="bw-footer__group-title">Company</div>
-							<ul class="bw-footer__nav-group">
+						<div className="col-lg-2 col-md-4">
+							<div className="bw-footer__group-title">Company</div>
+							<ul className="bw-footer__nav-group">
 								<li>
-									<a href="/#aboutUs" class="bw-footer__nav-group-item">About Us</a>
+									<Link to="/#aboutUs" className="bw-footer__nav-group-item">About Us</Link>
 								</li>
 								<li>
-									<a href="/projects" class="bw-footer__nav-group-item">Recent Work</a>
+									<Link to="/projects" className="bw-footer__nav-group-item">Recent Work</Link>
 								</li>
 								<li>
-									<a href="/#Testimonials" class="bw-footer__nav-group-item">Testimonials</a>
+									<Link to="/#Testimonials" className="bw-footer__nav-group-item">Testimonials</Link>
 								</li>
 								<li>
-									<a href="/#pricing" class="bw-footer__nav-group-item">Pricing Packages</a>
+									<Link to="/#pricing" className="bw-footer__nav-group-item">Pricing Packages</Link>
 								</li>
 							</ul>
 						</div>
-						<div class="col-lg-3 col-md-5">
-							<div class="bw-footer__group-title">Contact</div>
-							<ul class="bw-footer__contact-group">
+						<div className="col-lg-3 col-md-5">
+							<div className="bw-footer__group-title">Contact</div>
+							<ul className="bw-footer__contact-group">
 								<li>
-									<span class="bw-footer__contact-group-location">
-										<i class="bw-icon icon-map-marker-alt"></i>
+									<span className="bw-footer__contact-group-location">
+										<i className="bw-icon icon-map-marker-alt"></i>
 										116 W Jackson #254 Chicago, IL 60604
 									</span>
 								</li>
 								<li>
-									<a class="bw-footer__contact-group-email" href="mailto:info@example">
-										<i class="bw-icon icon-envelope"></i>
+									<Link className="bw-footer__contact-group-email" to="mailto:info@example">
+										<i className="bw-icon icon-envelope"></i>
 										info@example
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</div>
-						<div class="col-lg-3 col-md-12">
-							<div class="bw-footer__group-title">Create a Modern Webwite for Your Business</div>
-							<button class="bw-btn">Make An Enquiry</button>
+						<div className="col-lg-3 col-md-12">
+							<div className="bw-footer__group-title">Create a Modern Webwite for Your Business</div>
+							<button className="bw-btn">Make An Enquiry</button>
 						</div>
 					</div>
-					<div class="bw-subfooter__wrap">
-						<div class="bw-subfooter__copyright">
+					<div className="bw-subfooter__wrap">
+						<div className="bw-subfooter__copyright">
 							Small Bussiness Websites Inc. © 2020 All Rights Reserved.							
 						</div>
 
-						<div class="bw-footer__social">
-							<a class="bw-footer__social-link" href="">
-								<i class="bw-icon icon-facebook-f"></i>
-							</a>
-							<a class="bw-footer__social-link" href="">
-								<i class="bw-icon icon-twitter"></i>
-							</a>
+						<div className="bw-footer__social">
+							<Link className="bw-footer__social-link" to="">
+								<i className="bw-icon icon-facebook-f"></i>
+							</Link>
+							<Link className="bw-footer__social-link" to="">
+								<i className="bw-icon icon-twitter"></i>
+							</Link>
 						</div>
-						<div class="clearfix"></div>
+						<div className="clearfix"></div>
 					</div>
 				</div>
 			</div>

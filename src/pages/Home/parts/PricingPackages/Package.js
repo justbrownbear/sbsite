@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Service } from "./Service";
 import { AdditionalService } from "./AdditionalService";
+import { HashLink as Link } from "react-router-hash-link";
 
 
 
@@ -23,7 +24,7 @@ export function Package( props )
 					{ services && services.map( ( element ) => <Service key={ element.id } title={ element.title } /> ) }
 					{ additionalServices && additionalServices.map( ( element ) => <AdditionalService key={ element.id } title={ element.title } /> ) }
 				</ul>
-				<a href={ "/order?package=" + id } className="bw-btn-border">Get Started</a>
+				<Link to={ "/order?package=" + id } className="bw-btn-border">Get Started</Link>
 			</div>
 		</div>
 	);

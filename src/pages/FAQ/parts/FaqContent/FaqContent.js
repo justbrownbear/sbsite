@@ -3,7 +3,7 @@ import { FaqItem } from "./FaqItem";
 
 
 
-export function FaqContent( props ) 
+export default function FaqContent( props ) 
 {
 	const { questions } = props;
 

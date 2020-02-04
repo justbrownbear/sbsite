@@ -5,7 +5,7 @@ import "../../../../sass/components/pricing-packages.scss";
 
 
 
-export function PricingPackages( props )
+export default function PricingPackages( props )
 {
 	return (
 		<div id="pricing" className="bw-pricing-packages">
