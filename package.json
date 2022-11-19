@@ -12,7 +12,7 @@
     "react-rotating-text": "^1.4.1",
     "react-router-dom": "^5.1.1",
     "react-router-hash-link": "^1.2.2",
-    "react-scripts": "^3.3.0",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.25.2",
     "react-svg": "^10.0.20",
     "slick-carousel": "^1.8.1"
@@ -42,12 +42,12 @@
     "compression-webpack-plugin": "^3.1.0",
     "copy-webpack-plugin": "^5.1.1",
     "cross-env": "^7.0.0",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
     "webpack-clean-obsolete-chunks": "^0.4.0",
-    "webpack-cli": "^3.3.10",
+    "webpack-cli": "^3.3.12",
     "webpack-merge": "^4.2.2"
   }
 }
